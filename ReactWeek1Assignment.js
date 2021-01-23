@@ -31,7 +31,11 @@ class Bootcamp {
     if (!this.students.includes(studentToRegister.email)) {
       this.students.push(studentToRegister);
       console.log(
-        `registering ${studentToRegister.name} ${studentToRegister.community}`
+        `registering ${studentToRegister.name} to the bootcamp ${this.name}`
+      );
+    } else {
+      console.log(
+        `${studentToRegister.name} is already registered for ${this.name}`
       );
     }
     return this.students;
